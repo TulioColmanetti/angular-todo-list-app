@@ -1,1 +1,12 @@
-<mat-expansion-panel></mat-expansion-panel>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> {{ task?.title }} </mat-panel-title>
+    <mat-panel-description>
+      {{ task?.description }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <ul>
+    <li>{{ task?.dueDate }}</li>
+    <li>{{ task?.priority }}</li>
+  </ul>
+</mat-expansion-panel>
