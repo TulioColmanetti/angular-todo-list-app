@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/models/task.model';
+import { Task, TaskPriority } from 'src/app/models/task.model';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,5 +11,22 @@ export class TodoListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.taskList = [
+      {
+        title: 'Durmir',
+        description: 'Lembrar de descansar',
+        dueDate: new Date(),
+        priority: TaskPriority.Low,
+        labels: [],
+      },
+      {
+        title: 'Todo List App',
+        description: 'Fazer projeto Todo List App',
+        dueDate: new Date(),
+        priority: TaskPriority.High,
+        labels: [],
+      },
+    ];
+  }
 }
