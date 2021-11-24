@@ -19,6 +19,7 @@ export class TodoListComponent implements OnInit {
         dueDate: new Date(),
         priority: TaskPriority.Low,
         labels: [],
+        done: false,
       },
       {
         title: 'Todo List App',
@@ -26,6 +27,7 @@ export class TodoListComponent implements OnInit {
         dueDate: new Date(),
         priority: TaskPriority.High,
         labels: [],
+        done: false,
       },
     ];
   }
