@@ -1,13 +1,16 @@
 <!-- <mat-expansion-panel [ngStyle]="{ backgroundColor: getColor() }" *ngIf="task"> -->
-<mat-expansion-panel [ngClass]="getClass()" *ngIf="task">
-  <mat-expansion-panel-header>
-    <mat-panel-title> {{ task.title }} </mat-panel-title>
-    <mat-panel-description>
-      {{ task.description }}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <ul>
-    <li>{{ task.dueDate }}</li>
-    <li>{{ task.priority }}</li>
-  </ul>
-</mat-expansion-panel>
+<div *ngIf="task" class="item-container">
+  <mat-checkbox [checked]="task.done" style="margin-right: 12px"></mat-checkbox>
+  <mat-expansion-panel [ngClass]="getClass()" style="flex: 1">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ task.title }} </mat-panel-title>
+      <mat-panel-description>
+        {{ task.description }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ul>
+      <li>{{ task.dueDate }}</li>
+      <li>{{ task.priority }}</li>
+    </ul>
+  </mat-expansion-panel>
+</div>
