@@ -1,4 +1,5 @@
-<mat-expansion-panel *ngIf="task">
+<!-- <mat-expansion-panel [ngStyle]="{ backgroundColor: getColor() }" *ngIf="task"> -->
+<mat-expansion-panel [ngClass]="getClass()" *ngIf="task">
   <mat-expansion-panel-header>
     <mat-panel-title> {{ task.title }} </mat-panel-title>
     <mat-panel-description>

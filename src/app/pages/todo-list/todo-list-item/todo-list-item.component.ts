@@ -13,4 +13,30 @@ export class TodoListItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  getColor(): string {
+    switch (this.task?.priority) {
+      case 'Low':
+        return '#f5e769';
+      case 'Medium':
+        return '#f5b869';
+      case 'High':
+        return '#f56969';
+      default:
+        return 'white';
+    }
+  }
+
+  getClass(): string {
+    switch (this.task?.priority) {
+      case 'Low':
+        return 'bg-yellow';
+      case 'Medium':
+        return 'bg-orange';
+      case 'High':
+        return 'bg-red';
+      default:
+        return '';
+    }
+  }
 }
