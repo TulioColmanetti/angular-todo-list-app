@@ -9,6 +9,7 @@
       [taskId]="id"
       [taskObj]="task"
       (warnTaskWasDone)="markAsDone($event)"
-    ></app-todo-list-item>
+      ><p>Anotações da Tarefa {{ id + 1 }}</p>
+    </app-todo-list-item>
   </mat-card-content>
 </mat-card>
