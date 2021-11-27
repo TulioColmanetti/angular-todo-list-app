@@ -1,4 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 import { Task } from './../../../models/task.model';
 
@@ -9,6 +17,9 @@ import { Task } from './../../../models/task.model';
 })
 export class TodoListItemComponent implements OnInit {
   @Input('taskObj') task?: Task;
+  @Input() taskId?: number;
+  @Output() warnTaskWasDone: EventEmitter<any> = new EventEmitter();
+  @ViewChild('checkboxInput') checkboxInput?: ElementRef;
 
   constructor() {}
 
@@ -38,5 +49,9 @@ export class TodoListItemComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  markAsDone(event: any) {
+    this.warnTaskWasDone.emit({ id: this.taskId, value: event.checked });
   }
 }

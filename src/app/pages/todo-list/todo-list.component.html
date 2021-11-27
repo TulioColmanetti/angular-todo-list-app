@@ -5,8 +5,10 @@
   </mat-card-header>
   <mat-card-content>
     <app-todo-list-item
-      *ngFor="let task of taskList"
+      *ngFor="let task of taskList; index as id"
+      [taskId]="id"
       [taskObj]="task"
+      (warnTaskWasDone)="markAsDone($event)"
     ></app-todo-list-item>
   </mat-card-content>
 </mat-card>

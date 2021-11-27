@@ -1,6 +1,11 @@
 <!-- <mat-expansion-panel [ngStyle]="{ backgroundColor: getColor() }" *ngIf="task"> -->
 <div *ngIf="task" class="item-container">
-  <mat-checkbox [checked]="task.done" style="margin-right: 12px"></mat-checkbox>
+  <mat-checkbox
+    #checkboxInput
+    [checked]="task.done"
+    (change)="markAsDone($event)"
+    style="margin-right: 12px"
+  ></mat-checkbox>
   <mat-expansion-panel [ngClass]="getClass()" style="flex: 1">
     <mat-expansion-panel-header>
       <mat-panel-title> {{ task.title }} </mat-panel-title>
