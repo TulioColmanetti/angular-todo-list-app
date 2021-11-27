@@ -12,4 +12,5 @@
       ><p>Anotações da Tarefa {{ id + 1 }}</p>
     </app-todo-list-item>
   </mat-card-content>
+  <mat-spinner *ngIf="!taskList.length"></mat-spinner>
 </mat-card>
