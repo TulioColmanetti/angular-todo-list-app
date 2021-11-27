@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { delay, of } from 'rxjs';
 import { TaskPriority } from '../models/task.model';
 
 @Injectable({
@@ -8,7 +9,7 @@ export class TodoListService {
   constructor() {}
 
   getTasks() {
-    return [
+    return of([
       {
         title: 'Durmir',
         description: 'Lembrar de descansar',
@@ -25,6 +26,6 @@ export class TodoListService {
         labels: [],
         done: false,
       },
-    ];
+    ]).pipe(delay(2000));
   }
 }

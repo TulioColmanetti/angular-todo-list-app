@@ -14,7 +14,9 @@ export class TodoListComponent implements OnInit {
   constructor(private todoListService: TodoListService) {}
 
   ngOnInit(): void {
-    this.taskList = this.todoListService.getTasks();
+    this.todoListService.getTasks().subscribe((taskList: Task[]) => {
+      this.taskList = taskList;
+    });
   }
 
   markAsDone(obj: { id: number; value: boolean }) {
