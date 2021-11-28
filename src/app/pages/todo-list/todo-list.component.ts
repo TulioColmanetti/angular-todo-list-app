@@ -44,12 +44,11 @@ export class TodoListComponent implements OnInit {
   }
 
   editTask(id: number) {
-    const sub = this.todoListService
-      .updateTask(id, { done: true })
-      .subscribe(() => {
-        this.router.navigate(['/update-task']);
-        sub.unsubscribe();
-      });
+    this.router.navigate(['/update-task/' + id.toString()]);
+
+    // const sub = this.todoListService.updateTask(id, {}).subscribe(() => {
+    //   sub.unsubscribe();
+    // });
   }
 
   deleteTask(id: number) {
