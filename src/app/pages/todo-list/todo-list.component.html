@@ -7,10 +7,12 @@
     <app-todo-list-item
       *ngFor="let task of taskList; index as id"
       [taskObj]="task"
-      [taskId]="id"
+      [taskId]="task.id"
       (warnTaskWasDone)="markAsDone($event)"
+      (warnEditTask)="editTask($event)"
+      (warnDeleteTask)="deleteTask($event)"
     >
-      <p>Anotações da Tarefa {{ id + 1 }}</p>
+      <p>Anotações da Tarefa {{ task.id }}</p>
     </app-todo-list-item>
   </mat-card-content>
 
