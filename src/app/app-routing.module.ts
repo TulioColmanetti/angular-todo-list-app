@@ -8,7 +8,11 @@ import { UpdateTaskComponent } from './pages/update-task/update-task.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', canActivate: [AuthGuard], component: TodoListComponent },
+  {
+    path: 'list-tasks',
+    canActivate: [AuthGuard],
+    component: TodoListComponent,
+  },
   { path: 'login', component: LoginComponent },
   {
     path: 'create-task',
@@ -16,11 +20,11 @@ const routes: Routes = [
     component: CreateTaskComponent,
   },
   {
-    path: 'update-task',
+    path: 'update-task/:id',
     canActivate: [AuthGuard],
     component: UpdateTaskComponent,
   },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'list-tasks' },
 ];
 
 @NgModule({
