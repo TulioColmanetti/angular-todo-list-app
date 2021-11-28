@@ -42,6 +42,10 @@ export class TodoListService {
     // ]).pipe(delay(2000));
   }
 
+  getTaskById(id: number): Observable<any> {
+    return this.http.get(URL + '/' + id.toString());
+  }
+
   createTask(task: Task) {
     return this.http.post<Task>(URL, task);
   }
