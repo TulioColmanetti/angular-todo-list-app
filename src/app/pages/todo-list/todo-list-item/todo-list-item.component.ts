@@ -27,11 +27,11 @@ export class TodoListItemComponent implements OnInit {
 
   getColor(): string {
     switch (this.task?.priority) {
-      case 'Low':
+      case 'LOW':
         return '#f5e769';
-      case 'Medium':
+      case 'MEDIUM':
         return '#f5b869';
-      case 'High':
+      case 'HIGH':
         return '#f56969';
       default:
         return 'white';
@@ -40,11 +40,11 @@ export class TodoListItemComponent implements OnInit {
 
   getClass(): string {
     switch (this.task?.priority) {
-      case 'Low':
+      case 'LOW':
         return 'bg-yellow';
-      case 'Medium':
+      case 'MEDIUM':
         return 'bg-orange';
-      case 'High':
+      case 'HIGH':
         return 'bg-red';
       default:
         return '';
