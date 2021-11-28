@@ -17,4 +17,8 @@ export class LoginService {
 
     if (this.authenticated) this.router.navigate(['']);
   }
+
+  userIsLoggedIn(): boolean {
+    return this.authenticated;
+  }
 }
