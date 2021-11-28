@@ -9,3 +9,7 @@
 .mouse-pointer {
   cursor: pointer;
 }
+
+.custom-button {
+  margin: auto 5px;
+}

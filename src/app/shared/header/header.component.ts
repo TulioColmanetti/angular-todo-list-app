@@ -14,4 +14,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.loginService.showMenu.subscribe((show) => (this.render = show));
   }
+
+  logoutUser() {
+    this.loginService.logoutUser();
+  }
 }
