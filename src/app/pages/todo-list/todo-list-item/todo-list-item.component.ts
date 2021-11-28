@@ -19,6 +19,8 @@ export class TodoListItemComponent implements OnInit {
   @Input('taskObj') task?: Task;
   @Input() taskId?: number;
   @Output() warnTaskWasDone: EventEmitter<any> = new EventEmitter();
+  @Output() warnEditTask: EventEmitter<any> = new EventEmitter();
+  @Output() warnDeleteTask: EventEmitter<any> = new EventEmitter();
   @ViewChild('checkboxInput') checkboxInput?: ElementRef;
 
   constructor() {}
@@ -53,5 +55,13 @@ export class TodoListItemComponent implements OnInit {
 
   markAsDone(event: any) {
     this.warnTaskWasDone.emit({ id: this.taskId, value: event.checked });
+  }
+
+  editTask() {
+    this.warnEditTask.emit(this.taskId);
+  }
+
+  deleteTask() {
+    this.warnDeleteTask.emit(this.taskId);
   }
 }
