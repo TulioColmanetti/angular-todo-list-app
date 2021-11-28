@@ -1,10 +1,5 @@
-<mat-card>
-  <form
-    *ngIf="taskForm"
-    [formGroup]="taskForm"
-    (submit)="onSubmit()"
-    class="task-form"
-  >
+<mat-card *ngIf="taskForm">
+  <form [formGroup]="taskForm" (submit)="onSubmit()" class="task-form">
     <mat-form-field appearance="outline">
       <mat-label>Title</mat-label>
       <input matInput formControlName="title" />

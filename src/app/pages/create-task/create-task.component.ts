@@ -40,7 +40,7 @@ export class CreateTaskComponent implements OnInit {
         done: this.taskForm?.controls['done'].value,
       })
       .subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['list-tasks']);
         sub.unsubscribe();
       });
   }
