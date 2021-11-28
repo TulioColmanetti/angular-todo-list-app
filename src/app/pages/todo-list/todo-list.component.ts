@@ -23,9 +23,8 @@ export class TodoListComponent implements OnInit {
   }
 
   markAsDone(obj: { id: number; value: boolean }) {
-    const id = obj.id;
-    const value = obj.value;
-
+    // const id = obj.id;
+    // const value = obj.value;
     // this.taskList$[id].done = value;
   }
 }
