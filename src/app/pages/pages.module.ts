@@ -9,6 +9,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list/todo-list-item/todo-list-item.component';
 import { LoginComponent } from './login/login.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { UpdateTaskComponent } from './update-task/update-task.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
     TodoListItemComponent,
     LoginComponent,
     CreateTaskComponent,
+    UpdateTaskComponent,
   ],
   imports: [
     CommonModule,
