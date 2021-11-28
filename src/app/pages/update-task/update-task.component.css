@@ -1,0 +1,10 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  margin-top: 15px;
+  width: 80px;
+  align-self: flex-end;
+}
