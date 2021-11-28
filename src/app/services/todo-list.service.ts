@@ -41,4 +41,16 @@ export class TodoListService {
     //   },
     // ]).pipe(delay(2000));
   }
+
+  createTask(task: Task) {
+    return this.http.post<Task>(URL, task);
+  }
+
+  updateTask(id: number, taskData: Object) {
+    return this.http.patch<Task>(URL + '/' + id.toString(), taskData);
+  }
+
+  deleteTask(id: number) {
+    return this.http.delete(URL + '/' + id.toString());
+  }
 }
