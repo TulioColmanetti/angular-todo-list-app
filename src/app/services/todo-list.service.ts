@@ -3,12 +3,15 @@ import { delay, Observable, of } from 'rxjs';
 import { Task, TaskPriority } from '../models/task.model';
 import { HttpClient } from '@angular/common/http';
 
-const URL = 'http://madsti.com.br:9099/todos';
-const options = {
-  headers: {
-    Authorization: 'Basic ' + btoa('admin:password'),
-  },
-};
+// const URL = 'http://madsti.com.br:9099/todos';
+// const options = {
+//   headers: {
+//     Authorization: 'Basic ' + btoa('admin:password'),
+//   },
+// };
+
+const URL = 'http://localhost:3001/tasks';
+const options = {};
 
 @Injectable({
   providedIn: 'root',
