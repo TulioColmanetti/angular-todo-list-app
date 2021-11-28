@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: TodoListComponent },
   { path: 'login', component: LoginComponent },
   { path: 'task', component: CreateTaskComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
