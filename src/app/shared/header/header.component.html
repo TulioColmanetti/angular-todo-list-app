@@ -1,10 +1,20 @@
 <mat-toolbar *ngIf="render" color="primary">
-  <span>Todo List App</span>
+  <span class="mouse-pointer" routerLink="">Todo List App</span>
   <span class="spacer"></span>
-  <a routerLink="login">
-    <button mat-raised-button color="primary">Login</button>
-  </a>
-  <button routerLink="task" mat-raised-button color="primary">
+  <button
+    routerLink="task"
+    routerLinkActive="white-border"
+    mat-raised-button
+    color="primary"
+  >
     Create Task
+  </button>
+  <button
+    routerLink="login"
+    routerLinkActive="white-border"
+    mat-raised-button
+    color="primary"
+  >
+    Login
   </button>
 </mat-toolbar>
