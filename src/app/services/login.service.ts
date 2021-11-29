@@ -6,16 +6,18 @@ import { Router } from '@angular/router';
 })
 export class LoginService {
   authenticated: boolean = false;
+  // Bypass login screen during tests
+  // authenticated: boolean = true;
 
   showMenu: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private router: Router) {}
 
   loginUser(email: string, password: string) {
-    this.authenticated = email === 'a' && password === 'b';
+    this.authenticated = email === 'admin@admin.com' && password === '1234';
     this.showMenu.emit(this.authenticated);
 
-    if (this.authenticated) this.router.navigate(['']);
+    if (this.authenticated) this.router.navigate(['list-tasks']);
   }
 
   userIsLoggedIn(): boolean {

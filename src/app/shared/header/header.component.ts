@@ -8,6 +8,8 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class HeaderComponent implements OnInit {
   render: boolean = false;
+  // Bypass login screen during tests
+  // render: boolean = true;
 
   constructor(private loginService: LoginService) {}
 
