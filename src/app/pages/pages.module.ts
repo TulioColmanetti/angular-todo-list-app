@@ -10,6 +10,7 @@ import { TodoListItemComponent } from './todo-list/todo-list-item/todo-list-item
 import { LoginComponent } from './login/login.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UpdateTaskComponent } from './update-task/update-task.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
   ],
   exports: [TodoListComponent, AppRoutingModule],
 })
